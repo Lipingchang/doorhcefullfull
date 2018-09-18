@@ -13,10 +13,12 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     public static String LogFileName = "logfile";
+    public static Context main_context = null;
 
     Button flush_textview_btn,read_btn;
     TextView show_file_context;
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
+
+        main_context = getApplicationContext();
 
         flush_textview_btn = (Button)findViewById(R.id.id_mainactivity_write_btn);
         show_file_context = (TextView)findViewById(R.id.id_mainactivity_textview);
@@ -37,6 +41,11 @@ public class MainActivity extends AppCompatActivity {
                 save();
             }
         });
+
+        PwdManager pwd_manager = PwdManager.getInstance();
+        List<PwdManager.PwdInfo> list =  pwd_manager.getList();
+        System.out.println("pwd info:"+list.size());
+        System.out.println(this.getFilesDir().getAbsolutePath());
 
         read_btn.setOnClickListener(new View.OnClickListener() {
             @Override
