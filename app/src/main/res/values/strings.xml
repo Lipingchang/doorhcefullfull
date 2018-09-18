@@ -5,4 +5,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="aiddescription">apdu Service</string>
     <string name="aiddescriptionservice">apdu Service Name</string>
+    <string name="keynotfound">找不到要删除的内容</string>
+    <string name="keyduplicated">内容重复</string>
 </resources>
