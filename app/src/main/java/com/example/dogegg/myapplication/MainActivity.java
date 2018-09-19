@@ -13,6 +13,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.Date;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -35,17 +36,28 @@ public class MainActivity extends AppCompatActivity {
         show_file_context = (TextView)findViewById(R.id.id_mainactivity_textview);
         read_btn = (Button)findViewById(R.id.id_mainactivity_read_btn);
 
+
+//        PwdManager pwd_manager = PwdManager.getInstance();
+//        List<PwdManager.PwdInfo> list =  pwd_manager.getList();
+//        System.out.println("pwd info:"+list.size());
+//        PwdManager.PwdInfo info =  pwd_manager.new PwdInfo();
+//        info.key = "603";
+//        info.pwd = "1111";
+//        info.active_session_start = new Date(System.currentTimeMillis());
+//        info.active_session_stop  = new Date(System.currentTimeMillis()+10000);
+//        pwd_manager.Add(info);
+//
+//        list = pwd_manager.getList();
+//        System.out.println("2:"+list.size());
+//        System.out.println(list.get(0).active_session_start.toString());
+//        pwd_manager.Add(info);
+
         flush_textview_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 save();
             }
         });
-
-        PwdManager pwd_manager = PwdManager.getInstance();
-        List<PwdManager.PwdInfo> list =  pwd_manager.getList();
-        System.out.println("pwd info:"+list.size());
-        System.out.println(this.getFilesDir().getAbsolutePath());
 
         read_btn.setOnClickListener(new View.OnClickListener() {
             @Override
