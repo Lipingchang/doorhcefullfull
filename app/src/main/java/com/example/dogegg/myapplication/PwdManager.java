@@ -63,7 +63,7 @@ public class PwdManager{
         Iterator<PwdInfo> it = pwd_list.iterator();
         while(it.hasNext()){
             PwdInfo info = it.next();
-            if( info.key == key ){
+            if( info.key.equals(key) ){
                 delpos = count;
                 break;
             }

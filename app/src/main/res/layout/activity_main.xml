@@ -11,22 +11,47 @@
         android:text=""
         />
     <Button
-        android:text="write"
+        android:text="fromfile"
         android:id="@+id/id_mainactivity_write_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <Button
-        android:text="read"
+        android:text="addtofile"
         android:id="@+id/id_mainactivity_read_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/id_textview_showPwdInfoList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="key"
+        android:id="@+id/id_edittext_keyinput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="pwd"
+        android:id="@+id/id_edittext_pwdinput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/id_button_del_pwdinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="del"/>
+    <Button
+        android:text="updatepwd"
+        android:id="@+id/id_button_update_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <fragment
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:name="com.example.dogegg.myapplication.BlankFragment_left"
         android:id="@+id/id_fragment_left"
         />
-
     <fragment
         android:layout_width="match_parent"
         android:layout_height="100dp"
